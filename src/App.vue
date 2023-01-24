@@ -24,16 +24,21 @@ onBeforeMount(() => {
                 </div>
             </div>
         </header>
-        <main class="flex-1 overflow-scroll">
+        <main class="flex-1 overflow-auto">
             <router-view></router-view>
         </main>
-        <footer class="p-4">
+        <footer class="p-4 border-t border-gray-600">
             <div class="flex items-center justify-between">
                 <router-link
                     v-for="(route, i) in routes"
                     :key="i"
                     :to="route.path"
                     class="text-lg p-3"
+                    :class="
+                        route.name === $route.name
+                            ? 'text-green-600'
+                            : 'text-white'
+                    "
                 >
                     <i :class="route.iconClass"></i>
                 </router-link>

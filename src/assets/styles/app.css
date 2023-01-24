@@ -2,9 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* width */
+/* ::-webkit-scrollbar {
+    width: 6px;
+} */
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+} */
+
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+    background: #888;
+} */
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+} */
+
 html {
     @apply bg-gray-800 text-white;
 }
 main {
-    height: calc(100vh - 148px);
+    max-height: calc(100vh - 149px);
 }

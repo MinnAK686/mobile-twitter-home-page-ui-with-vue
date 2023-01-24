@@ -1,9 +1,10 @@
-<script setup></script>
+<script setup>
+import Tweet from "../components/Tweet.vue";
+import tweets from "../tweets";
+</script>
 
 <template>
-    <main>
-        <h1 class="text-3xl text-sky-600 text-center">
-            <i class="fa-solid fa-home"></i> Home Page
-        </h1>
-    </main>
+    <div>
+        <Tweet v-for="tweet in tweets" :key="tweet._id" :tweet="tweet" />
+    </div>
 </template>
